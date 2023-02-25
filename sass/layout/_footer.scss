@@ -1,0 +1,81 @@
+.footer{
+  color:$white;
+  padding: 3rem 0;
+  background-color:#131515;
+  text-align: center;
+  h5{
+    @include fonts(20px,$light,$white);
+margin-bottom: 2rem;
+  }
+  h6{
+    font-size: 16px;
+    font-weight: $light;
+    margin-top:2.8rem ;
+  }
+  .col{
+    margin-bottom: 2rem;
+  }
+.list_item{
+    @include fonts($subtext-size,$light,$white);
+    margin-bottom: 1rem;
+    .list_item--link{
+      color:$white;
+      opacity: .8;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+  .social-icons{
+    @include flex($justify:center);
+    gap: 2rem;
+  }
+span{
+  opacity: .8;
+}
+.footer-bottom{
+  padding-top:2rem ;
+  border-top: 1px solid hsla(0,0%,100%,.1);
+  .footer-bottom__navigation{
+   margin-bottom: 2rem;
+    @include flex($justify:center);
+    gap: 2rem;
+    a{
+     color:$white;
+     opacity: .8;
+     &:hover{
+      opacity: 1;
+     }
+    }
+  }
+}
+  
+  }
+  
+
+@include lg{
+  .footer{
+    padding-bottom: 2rem;
+    text-align: left;
+    padding-left:8% ;
+    padding-right:8% ;
+    .footer-menu{
+      @include flex($justify:space-between);
+      align-items:flex-start;
+    }
+    .social-icons{
+      justify-content: flex-start;
+    }
+
+ .footer-bottom{
+    @include flex($justify:space-between);
+    .footer-bottom__navigation{
+      margin-bottom: 0;
+      order: 2;
+    }
+  }
+
+  }
+
+ 
+}

@@ -1,0 +1,20 @@
+.banner-carousel{
+  display: none;
+}
+
+@include lg(){
+ 
+  .banner-carousel{
+    display: block;
+  background-color:$background;
+  .bannersCarousel{
+    transition-timing-function: linear;
+    width: 84%;
+    margin: 0 auto;
+    height: 25%;
+    img{
+      width: 150px;
+    }
+  }
+}
+}

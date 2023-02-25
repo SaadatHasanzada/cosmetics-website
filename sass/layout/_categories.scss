@@ -1,0 +1,36 @@
+.categories{
+
+  overflow-x: scroll;
+  background-color:$background;
+  width: 100%;
+ padding:1.8rem 0 1.8rem 1rem;
+ &::-webkit-scrollbar{
+  display: none;
+}
+ .category{
+  @include flex($direction:column);
+  gap: .5rem;
+  .category_par{
+  @include fonts($subtext-size,$light,$subtext-color);
+ }
+ }
+ 
+
+}
+.slider {
+  display: flex;
+  list-style: none;
+  gap: .7rem;
+}
+
+
+.slider > * {
+  width: 20%;
+  flex: 0 0 auto;
+}
+
+@include lg(){
+  .categories{
+    display:none;
+  }
+}

@@ -1,0 +1,256 @@
+
+img{
+  cursor: pointer;
+}
+header{
+width: 100%;
+padding: 1rem;
+top: 0;
+position: fixed;
+z-index: 10;
+  background-color: $primary-dark;
+
+  @include flex($justify:space-between);
+
+}
+.bag,.logo,.globe,.language,.user-black,.heart-black{
+  display: none;
+  cursor:pointer;
+}
+.language{
+  font-size: $medium-font;
+  border:none;
+  outline: none;
+}
+.header-logo{
+  @include flex();
+  gap: .5rem;
+}
+
+.header-icons{
+  @include flex();
+  gap: 1rem;
+  .icons{
+    @include flex();
+    gap: 1rem;
+  }
+  .number{
+    position: absolute;
+    background-color:$primary-pink;
+    border-radius:50%;
+width:20px;
+height:20px;
+line-height: 20px;
+text-align: center;
+right: .5rem;
+top: .5rem;
+@include fonts(10px,$light,$white);
+}
+}
+.input{
+  background-color:$primary-dark;
+  padding: 1rem;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+input[type="text"]{
+  background-color:$search-bar;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  padding-left: 3rem;
+ @include fonts($medium-font,$light,$primary-dark);
+ &:focus{
+  outline: 1px solid $primary-dark;
+ }
+}
+.input .search{
+  position: absolute;
+  top: 40%;
+  left: 2rem;
+}
+.navbar{
+  height: 100vh;
+  width: 80%;
+  position: absolute;
+  left: -80%;
+  background-color:$white;
+  padding: 1rem 0;
+  top: 0%;
+  z-index: 1000;
+  transition: all .3s;
+  .header-logo{
+    justify-content: space-between;
+    border-bottom:1px solid #E0E0E0;
+    padding:0 1rem  1rem 1rem ;
+    width: 100%;
+  }
+}
+
+.nav-list{
+  padding: 0 1rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+ 
+  .nav-item{
+    margin-bottom: 1.5rem;
+    @include flex($justify:space-between);
+   
+    .nav-link{
+      @include fonts($subtext-size,$light,$primary-dark);
+      font-family: mediumFont;
+ 
+    }
+  }
+}
+.lang{
+  margin-top: 3rem;
+  border-top: 1px solid #E0E0E0;
+  padding: 1rem;
+  @include flex();
+  gap: 1rem;
+  a{
+    @include fonts($size:$subtext-size,$weight:$light);
+text-transform: uppercase;
+
+  }
+  
+}
+.lang_item-one{
+  color:$primary-dark;
+}
+.lang_item-two,.lang_item-three{
+    color:$neutral-gray;
+}
+.navbar-buttons{
+  @include fonts($size:$subtext-size,$weight:$light);
+@include flex($justify:space-between);
+  width: 100%;
+  background-color:#FAF9F9;
+  padding: 1rem;
+  font-family: mediumFont;
+  .sign-in,.register{
+    width:8rem;
+    height: 3rem;
+    line-height: 3rem;
+    background-color:$primary-dark;
+    border-radius: 5px;
+    color:$white;
+    display: inline-block;
+    text-align: center;
+    font-family: mediumFont;
+
+  }
+  .sign-in:hover{
+    background-color:$hover-color;
+    transition: all .3s ease-in-out;
+  }
+  .register{
+    background-color:transparent;
+    color: $primary-dark;
+
+  }
+}
+.open{
+  left: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.background{
+  background-color: #fff;
+}
+.nav-item.desktop-item{
+  display: none;
+}
+
+
+
+// DESKTOP
+
+@include lg(){
+  .hamburger, .mb-logo,.cart,.user,.heart{
+    display:none;
+  }
+  .nav-item.desktop-item{
+    display: block;
+  }
+  header{
+    padding-left:8% ;
+    padding-right:8%;
+    background-color:$white;
+    justify-content: center;
+  }
+  .logo,.globe,.language,.bag,.user-black,.heart-black,.desktop-item{
+    display: block;
+  }
+  .input{
+    margin-left: auto;
+    margin-right: 2.5rem;
+  position: relative;
+    width: 45%;
+    background-color:transparent;
+    padding: 0;
+    .search{
+      top: 30%;
+      left: .9rem;
+    }
+  }
+ 
+  .header-icons{
+    // margin-left: 2.5rem;
+    justify-content: space-between;
+    width: 25%;
+    .select{
+      @include flex();
+      gap: .5rem;
+    }
+    .icons{
+      @include flex();
+      gap: 1.2rem;
+      // margin-left: 3.5rem;
+.number{
+  position: static;
+}
+    }
+  }
+
+
+.navbar{
+z-index: 99;
+  padding: 1rem 4rem;
+  left: 0;
+  width: 100%;
+  height: auto;
+  top: 100%;
+  background-color:$primary-dark;
+ 
+  .nav-list{
+    @include flex($justify:space-between);
+  //  gap: 2rem;
+   margin: 0;
+   .nav-item{
+    margin: 0;
+    .nav-link{
+      color:$white;
+      &:hover{
+        color:$primary-pink;
+        transition: all .3s;
+      }
+    }
+    img{
+      display: none;
+    }
+   }
+   
+  }
+  .header-logo,.lang,.navbar-buttons{
+    display: none;
+  }
+}
+
+
+}

@@ -1,0 +1,47 @@
+.subscribe{
+  padding: 2rem 1rem;
+  background-color: #f0f0f0;
+  text-align: center;
+  h4{
+    @include fonts($medium-font,$regular,$primary-dark);
+    margin-bottom: 2rem;
+    @include lg(){
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+    }
+  }
+  .subscribe-btns{
+    width: 100%;
+    @include flex();
+    gap: 1rem;
+    input{
+      padding-left: 1rem;
+      width: 70%;
+      height: 40px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      &:focus{
+        border:1px solid $primary-dark;
+      }
+    }
+    .sub-btn{
+      line-height: 40px;
+      color:$white;
+background-color:$primary-dark;
+      border-radius: 5px;
+      display: inline-block;
+      width: 25%;
+      height: 40px;
+      &:hover{
+        background-color:$hover-color;
+        transition: all .3s ease-in-out;
+      }
+    }
+    @include lg(){
+      width: 40%;
+      margin: 0 auto;
+        }
+  }
+}

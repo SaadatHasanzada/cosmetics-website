@@ -1,0 +1,29 @@
+.sold-out {
+.different_slide--second{
+  .swiper-cart{
+padding: 0;
+  }
+  .cart-header{
+    background-image: url(/assets/images/new2.svg);
+    height: 60%;
+  }
+  .cart_img{
+    width: 100%;
+  }
+  .cart-body{
+    // height: 30%;
+    padding: 1.9rem .8rem;
+    .prices{
+      @include flex();
+      gap: .2rem;
+    }
+    .old-price{
+      @include flex();
+      text-decoration: line-through;
+      @include fonts($text-size,$light,$neutral-gray);
+      margin-right: .3rem;
+    }
+  }
+}
+
+}

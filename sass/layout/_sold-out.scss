@@ -1,0 +1,238 @@
+.sold-out{
+  padding: 3rem 1rem;
+  padding-bottom: 0;
+  background-color:$background;
+ position: relative;
+  .swiper-container .swiper-slide{
+ 
+    padding: 0 8px;
+    box-sizing: border-box;
+    
+  }
+  .sold-out__links .sold-out__btn.desktop{
+    display: none;
+  }
+  .sold-out__header{
+    @include fonts($medium-font,$light,$primary-dark);
+    margin-bottom: 2rem;
+    font-family: mediumFont;
+  }
+
+  .mySwiper, .secondary-swiper, .favorites {
+    
+    width: 100%;
+    height: 60%;
+
+ }
+  }
+
+  .swiper-slide {
+        border-radius: 5px;
+    overflow: hidden;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:last-of-type{
+      display: none;
+    }
+    // border: 1px solid black;
+
+    .swiper-cart{
+   
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      padding: 0 .8rem 1.9rem  .8rem;
+      position: relative;
+      .cart-header{
+       height: 65%;
+        @include flex();
+        .cart_icon{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+        }
+        .cart_img{
+          margin: 0 auto;
+ 
+  height: 180px;
+        }
+      }
+      .cart-body{
+        height: 35%;
+        padding-top: 1.9rem;
+        .price{
+          @include fonts($medium-font,$light,$primary-pink);
+       @include flex();
+    gap: .2rem;
+    font-family: mediumFont;
+        }
+        p{
+          height: 15%;
+          @include fonts($subtext-size,$light,$paragraph-color);
+          margin-bottom: 2.8rem;
+        }
+        .valuation{
+          margin-bottom: .8rem;
+          @include flex();
+          gap: .5rem;
+          .stars{
+            @include flex($justify:center);
+          }
+          .number{
+            @include fonts(10px,$light,$neutral-gray);
+          }
+        }
+      }
+    }
+
+    
+  }
+
+.sold-out{
+  .different_slide{
+  
+    .swiper-cart{
+  padding: 0;
+    }
+    .cart-header{
+      background-image: url(/assets/images/s4.png);
+      height: 60%
+    }
+    .cart_img{
+      width: 100%;
+    }
+    .cart-body{
+      // height: 30%;
+      padding: 1.9rem .8rem;
+     
+      .prices{
+        @include flex();
+        gap: .2rem;
+      }
+      .old-price{
+        text-decoration: line-through;
+        @include fonts($text-size,$light,$neutral-gray);
+        margin-right: .3rem;
+        @include flex();
+      }
+    }
+  
+}
+}
+
+.sold-out__btn{
+@include flex($justify:center);
+margin-top: 2rem;
+gap: .7rem;
+
+a{
+  @include fonts($subtext-size,$light,$primary-dark);
+}
+}
+.sold-out .swiper-cart  .etiket{
+  display:none;
+}
+
+// Arrows
+
+.left_arrow{
+  position: absolute;
+top: 35%;
+left:6%;
+z-index: 2;
+color:$subtext-color;
+font-size: 2rem;
+width: 25px;
+height: 25px;
+}
+.right_arrow{
+  color:$subtext-color;
+width: 25px;
+height: 25px;
+  font-size: 2rem;
+  position: absolute;
+top: 35%;
+right: 6%;
+
+}
+
+
+
+// Media
+@include lg(){
+ 
+
+  .sold-out .swiper-cart  .etiket{
+    top: 8px;
+    display:block;
+    position: absolute;
+    left: 8px;
+  
+  }
+  .sold-out .swiper-cart  .first_cart--etiket{
+    
+    width: 25%;
+  }
+  
+  .sold-out .swiper-cart  .first_cart--etiket-two{
+    top: 35px;
+    width: 25%;
+  }
+  .sold-out .swiper-cart .second_cart--etiket{
+left: 4px;
+  }
+  .sold-out .swiper-cart .third_cart--etiket{
+.third_cart--img:nth-of-type(2){
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+.third_cart--img:nth-of-type(3){
+  position: absolute;
+  top: 20px;
+  left: 7px;
+}
+  }
+  .sold-out .swiper-cart .link{
+    top: 60px;
+    left: 187px;
+    
+  }
+  .sold-out .swiper-cart .link_description{
+    top: 30px;
+    left: 147px;
+    width: 40%;
+    
+  }
+  .sold-out{
+padding-left: 0;
+padding-right: 0;
+
+   .sold-out__links{
+    padding-left: 8%;
+   padding-right: 8%;
+    @include flex($justify:space-between);
+ .sold-out__btn.desktop{
+  @include flex($justify:center);
+  gap: .7rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+   }
+   .sold-out__btn.mobile{
+    display: none;
+   }
+   
+   .mySwiper, .secondary-swiper, .favorites {
+    padding-left: 8%;
+   padding-right: 8%;
+    height: 65%;
+  }
+  }
+  .sold-out .swiper-slide:last-of-type{
+    display: block;
+  }
+  
+}

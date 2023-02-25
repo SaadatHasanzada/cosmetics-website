@@ -1,0 +1,169 @@
+@import '../utilits/reset';
+@import '../utilits/variables';
+@import '../utilits/mixins';
+
+// Header
+body{
+  background-color:$background;
+ font-family: regularFont;
+}
+header{
+  justify-content: space-between;
+  background-color:$white;
+ h1{
+  @include fonts(20px,$medium,$primary-dark);
+ }
+}
+// Main
+.main{
+  margin-top: 4rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.payment-info{
+  border-radius:8px;
+  margin-bottom: 1rem;
+  label{
+    display: block;
+    margin-bottom: .5rem;
+  }
+  input{
+  border:  1px solid #BDBDBD;
+  font-size: 1rem;
+    outline: none;
+    background-color:$white;
+    padding-left: 1rem;
+    @include fonts($subtext-size,$light,$primary-dark);
+    font-family: regularFont;
+    height: 50px;
+    &:focus{
+      border: 1px solid $primary-dark;
+    }
+  }
+  padding: 1rem;
+  background-color:$white;
+  .info-heading{
+@include flex($justify:space-between);
+margin-bottom: 2rem;
+h2{
+  @include fonts(20px,$medium,$primary-dark);
+}
+  }
+  .name{
+    margin-bottom: 1rem;
+  }
+  .personal-info{
+    margin-bottom:1rem;
+    input{
+      outline: none;
+    }
+  }
+  .phone-info{
+    padding-left: .8rem;
+    @include flex();
+    border-radius: 8px;
+    border:  1px solid #BDBDBD;
+    margin-bottom: 1rem;
+    input{
+      border:none;
+      outline: none;
+     font-size: 1rem;
+     color:$primary-dark;
+    }
+    .phone-number{
+      outline: none;
+   border: none;
+   width: 65px;
+   font-size: 1rem;
+  }
+  }
+
+  .personal-info__email input{
+    width: 100%;
+    border-radius:8px;
+    padding-left: 1rem;
+    @include fonts($subtext-size,$light,$primary-dark);
+    font-family: regularFont;
+    outline: none;
+  }
+  
+  .personal-info.second{
+    margin-bottom:3rem;
+  }
+
+  .payment-info__btn{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color:$primary-dark;
+    color:$white;
+    height: 55px;
+    border-radius:8px;
+    text-align: center;
+    line-height: 55px;
+    padding: 0 2rem;
+    &:hover{
+      background-color:$hover-color;
+      transition: all .3s ease-in-out;
+    }
+  }
+  .shipping-address, .payment-method{
+    @include flex($justify:space-between);
+    border-top:1px solid $text-color;
+    padding: 1rem 0;
+    input{
+      font-size: 20px;
+      padding-left: 0;
+      border:none;
+      outline: none
+    }
+  }
+}
+
+
+
+
+// Header
+@include lg(){
+  .main{
+    margin-top: 6rem;
+  }
+  .info{
+    @include flex($justify:space-between);
+    align-items:flex-start;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  .payment-info{
+    padding: 2rem;
+    width: 65%;
+    .personal-info{
+      margin-bottom: 2rem;
+      @include flex($justify:space-between);
+      .name, .surname, .personal-info__number, .personal-info__email{
+        width: 47%;
+        margin-bottom: 0;
+      }
+      .phone-info{
+        margin-bottom: 0;
+      }
+    }
+    .payment-info__btn{
+      width: 35%;
+        }
+  }
+  
+  .total{
+    width: 30%;
+  }
+  header h1{
+    @include fonts(34px,$medium,$primary-dark);
+  }
+  .navbar{
+    display: none;
+  }
+
+
+
+}

@@ -1,0 +1,54 @@
+@import '../utilits/reset';
+@import '../utilits/variables';
+@import '../utilits/mixins';
+@import '../layout/header';
+@import '../layout/categories';
+@import '../layout/carousel';
+@import '../layout/sold-out';
+@import '../layout/new-products';
+@import '../layout/banner';
+@import '../layout/single-banner';
+@import '../layout/banner-carousel';
+@import '../layout/subscribe';
+@import '../layout/footer';
+@import '../layout/drop-down__basket';
+
+@font-face {
+  font-family: "regularFont";
+  src: url(/assets/Fonts/Euclid\ Circular\ A\ Regular.ttf);
+ 
+}
+@font-face {
+  font-family: "mediumFont";
+ 
+  src: url(/assets/Fonts/Euclid\ Circular\ A\ Medium.ttf);
+}
+
+
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $primary-dark;
+  opacity: .2;
+  z-index: 5;
+  visibility: hidden;
+}
+.visible{
+  visibility: visible;
+}
+main{
+  margin-top: 8rem;
+
+  
+}
+
+
+// 
+
+
+

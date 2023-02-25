@@ -1,0 +1,30 @@
+.banner{
+ padding-top: 3rem;
+  background-color: $background;
+  padding-bottom: 2rem;
+  .banners{
+    width: 100%;
+   @include flex($direction:column);
+  gap: 2rem;
+  img{
+    width: 100%;
+  }
+}
+  }
+  
+  @include lg(){
+    .banner{
+      width: 100%;
+      .banners{
+        @include flex(space-between,row);
+        width: 84%;
+        margin:0 auto;
+       
+      img{
+        width: 48%;
+      }
+    }
+    }
+    
+  }
+  
